@@ -25,7 +25,7 @@ Le dispositif sera composé :
 
 ![Schéma général du projet](Schema_general.png "Schéma général du fonctionnement du boîtier")
 
-Figure 1. Schéma général du système de pointage RFID.
+*Figure 1. Schéma général du système de pointage RFID.*
 
 La figure 1 présente le dispositif. Le capteur RFID lit la carte de l'étudiant et transmet l'information au Raspberry PI, qui enregistre la présence dans la base de données et signale le résultat par une LED de couleur (et un buzzer en cas de refus). Les présences sont consultables par l'enseignant sur le site web. Les flèches rouges en pointillés représentent les commandes de l'enseignant : depuis le site, il peut changer de cours (ce qui réinitialise le boîtier pour la prochaine séance) ou sélectionner la sortie d'un étudiant pour l'annuler directement dans la base de données en cas d'erreur.
 
@@ -45,12 +45,16 @@ La figure 1 présente le dispositif. Le capteur RFID lit la carte de l'étudiant
 
 ## Description des fonctionnalités
 
-| N° | Nom | Description | Sur quoi la fonction agit | Importance |
+| *N°* | *Nom* | *Description* | *Sur quoi la fonction agit* | *Importance* |
 |:--- |:------ |:------------ |:-------------- |:------ |
-| 1 | Lecture donnée | Le raspberry récupère la donnée récoltée par le capteur qui sera ensuite enregistrée dans la base de données | Raspberry, capteur RFID, base de données | 1 |
-| 2 | Communiquer les données | Via une connexion WIFI, la base de données met à jour le site Internet pour que l'utilisateur soit informé en temps réel | Base de données, utilisateur | 1 |
-| 3 | Donner le résultat après la lecture de la donnée | Selon la donnée reçue par le capteur, le LED envoie une couleur qui nous indique comment la donnée est lue ainsi que le buzzer dans un cas| Capteur, buzzer, LED, raspberry | 1 |
-| 4 | Manipuler les données | Selon la situation, l'utilisateur peut choisir d'annuler une donnée / supprimer toutes les données (sur le site Internet) | Utilisateur, base de données | 2 |
+| 1 | Lire la carte | Le raspberry récupère la donnée récoltée par le capteur RFID qui sera ensuite enregistrée dans la base de données | Raspberry, capteur RFID, base de données | 1 |
+| 2 | Enregistrer le passage | Via une connexion WIFI, la base de données met à jour le site Internet en temps réel | Base de données, utilisateur | 1 |
+| 3 | Signaler le résultat | Selon la donnée reçue par le capteur RFID, le LED envoie une couleur qui nous indique comment la donnée est lue ainsi que le buzzer dans un cas| Capteur RFID, buzzer, LED, raspberry | 1 |
+| 4 | Afficher le résultat | Lorsque l'utilisateur consulte le site Internet, il peux voir la liste des cartes enregistrées | Base de données, utilisateur | 1 |
+| 5 | Annuler la sortie | L'utilisateur peut supprimer un enregistrement dans la section sortie | Utilisateur, base de données | 2 |
+| 6 | Changer de cours | Quand le cours est terminé, l'utilisateur peut supprimer toutes les données de la base de données | Utilisateur, base de données | 2 |
+
+## Planning prévisionnel
 
 
 
