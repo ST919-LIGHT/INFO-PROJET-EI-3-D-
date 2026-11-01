@@ -50,7 +50,7 @@ La figure 1 présente le dispositif. Le capteur RFID lit la carte de l'étudiant
 | 1 | Lecture donnée | Le raspberry récupère la donnée récoltée par le capteur qui sera ensuite enregistrée dans la base de données | Raspberry, capteur RFID, base de données | 1 |
 | 2 | Communiquer les données | Via une connexion WIFI, la base de données met à jour le site Internet pour que l'utilisateur soit informé en temps réel | Base de données, utilisateur | 1 |
 | 3 | Donner le résultat après la lecture de la donnée | Selon la donnée reçue par le capteur, le LED envoie une couleur qui nous indique comment la donnée est lue ainsi que le buzzer dans un cas| Capteur, buzzer, LED, raspberry | 1 |
-| 4 | Manipuler les données | Selon la situation, l'utilisateur peut choisir d'annuler une donnée / supprimer toutes les données | Utilisateur, base de données (sur le site Internet)| 2 |
+| 4 | Manipuler les données | Selon la situation, l'utilisateur peut choisir d'annuler une donnée / supprimer toutes les données (sur le site Internet) | Utilisateur, base de données | 2 |
 
 
 
