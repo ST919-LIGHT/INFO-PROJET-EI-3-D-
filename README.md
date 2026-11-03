@@ -19,7 +19,7 @@ Le projet a pour objectif de développer un système de pointage automatique : u
 Le dispositif sera composé :
 * Capteur RFID (RC522)
 * LED (Verte / Orange / Rouge)
-* Raspberry PI
+* Raspberry Pi
 * Buzzer
 
 
@@ -27,7 +27,7 @@ Le dispositif sera composé :
 
 *Figure 1. Schéma général du système de pointage RFID.*
 
-La figure 1 présente le dispositif. Le capteur RFID lit la carte de l'étudiant et transmet l'information au Raspberry PI, qui enregistre la présence dans la base de données et signale le résultat par une LED de couleur (et un buzzer en cas de refus). Les présences sont consultables par l'enseignant sur le site web. Les flèches rouges en pointillés représentent les commandes de l'enseignant : depuis le site, il peut changer de cours (ce qui réinitialise le boîtier pour la prochaine séance) ou sélectionner la sortie d'un étudiant pour l'annuler directement dans la base de données en cas d'erreur.
+La figure 1 présente le dispositif. Le capteur RFID lit la carte de l'étudiant et transmet l'information au Raspberry Pi, qui enregistre la présence dans la base de données et signale le résultat par une LED de couleur (et un buzzer en cas de refus). Les présences sont consultables par l'enseignant sur le site web. Les flèches rouges en pointillés représentent les commandes de l'enseignant : depuis le site, il peut changer de cours (ce qui réinitialise le boîtier pour la prochaine séance) ou sélectionner la sortie d'un étudiant pour l'annuler directement dans la base de données en cas d'erreur.
 
 
 ## Scénarios d'usages
@@ -47,12 +47,12 @@ La figure 1 présente le dispositif. Le capteur RFID lit la carte de l'étudiant
 
 | *N°* | *Nom* | *Description* | *Sur quoi la fonction agit* | *Importance* |
 |:--- |:------ |:------------ |:-------------- |:------ |
-| 1 | Lire la carte | Le raspberry récupère la donnée récoltée par le capteur RFID qui sera ensuite enregistrée dans la base de données | Raspberry, capteur RFID, base de données | 1 |
-| 2 | Enregistrer le passage | Via une connexion WIFI, la base de données met à jour le site Internet en temps réel | Base de données, utilisateur | 1 |
-| 3 | Signaler le résultat | Selon la donnée reçue par le capteur RFID, le LED envoie une couleur qui nous indique comment la donnée est lue ainsi que le buzzer dans un cas| Capteur RFID, buzzer, LED, raspberry | 1 |
-| 4 | Afficher le résultat | Lorsque l'utilisateur consulte le site Internet, il peux voir la liste des cartes enregistrées | Base de données, utilisateur | 1 |
-| 5 | Annuler la sortie | L'utilisateur peut supprimer un enregistrement dans la section sortie | Utilisateur, base de données | 2 |
-| 6 | Changer de cours | Quand le cours est terminé, l'utilisateur peut supprimer toutes les données de la base de données | Utilisateur, base de données | 2 |
+| 1 | Lire la carte | Le capteur RFID lit l'identifiant de la carte de l'étudiant et le transmet au Raspberry Pi | Carte, capteur RFID, Raspberry Pi | 1 |
+| 2 | Enregistrer le passage | Le Raspberry Pi vérifie que l'étudiant est inscrit au cours, puis enregistre son entrée ou sa sortie avec l'heure dans la base de données | Raspberry Pi, base de données | 1 |
+| 3 | Signaler le résultat | La LED s'allume en vert, orange ou rouge selon le résultat de la lecture, et le buzzer retentit en cas de refus | Raspberry Pi, LED, buzzer | 1 |
+| 4 | Afficher les présents | Lorsque l'enseignant consulte le site web, il peut voir la liste des étudiants présents à partir de la base de données | Enseignant, site web, base de données | 1 |
+| 5 | Annuler la sortie | L'enseignant clique sur le bouton d'annulation à côté du nom de l'étudiant pour supprimer son heure de sortie dans la base de données | Enseignant, site web, base de données | 2 |
+| 6 | Changer de cours | Quand le cours est terminé, l'enseignant peut réinitialiser le boîtier et initialiser une nouvelle séance dans la base de données | Enseignant, site web, Raspberry Pi, base de données | 2 |
 
 ## Planning prévisionnel
 
