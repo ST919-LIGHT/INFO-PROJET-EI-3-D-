@@ -46,7 +46,7 @@ La figure 1 présente le dispositif. Le capteur RFID lit la carte de l'étudiant
 ## Description des fonctionnalités
 
 | *N°* | *Nom* | *Description* | *Sur quoi la fonction agit* | *Importance* |
-|:--- |:------ |:------------ |:-------------- |:------ |
+|:---: |:------ |:------------ |:-------------- |:------: |
 | 1 | Lire la carte | Le capteur RFID lit l'identifiant de la carte de l'étudiant et le transmet au Raspberry Pi | Carte, capteur RFID, Raspberry Pi | 1 |
 | 2 | Enregistrer le passage | Le Raspberry Pi vérifie que l'étudiant est inscrit au cours, puis enregistre son entrée ou sa sortie avec l'heure dans la base de données | Raspberry Pi, base de données | 1 |
 | 3 | Signaler le résultat | La LED s'allume en vert, orange ou rouge selon le résultat de la lecture, et le buzzer retentit en cas de refus | Raspberry Pi, LED, buzzer | 1 |
@@ -56,7 +56,7 @@ La figure 1 présente le dispositif. Le capteur RFID lit la carte de l'étudiant
 
 ## Planning prévisionnel
 
-
+*To be continued ...*
 
 
 
