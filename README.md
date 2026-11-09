@@ -2,7 +2,7 @@
 title: Analyse fonctionnelle d'un projet
 date: 2026-10-31
 subtitle: UL1IN021
-author: Clautina Kieki-Mafuta, Nayirah Abdool, Chen Legrand, Myra Souici Amar
+author: Clautina Kieki-Mafuta, Nayirah Abdool, Chen Legrand, Myra Souici Amar, Lina El Fatmi
 ---
 
 # Système de pointage RFID
