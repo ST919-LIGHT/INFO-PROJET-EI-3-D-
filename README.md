@@ -2,7 +2,7 @@
 title: Analyse fonctionnelle d'un projet
 date: 2026-10-31
 subtitle: UL1IN021
-author: Clautina Kieki-Mafuta, Nayirah Abdool, Chen Legrand, Myra Souici Amar, Lina El Fatmi
+author: Clautina Kieki-Mafuta, Nayirah Abdool, Myra Souici Amar, Lina El Fatmi
 ---
 
 # Système de pointage RFID
@@ -56,7 +56,9 @@ La figure 1 présente le dispositif. Le capteur RFID lit la carte de l'étudiant
 
 ## Planning prévisionnel
 
-*To be continued ...*
+![Tableau du planning prévisionnel](Semaine.png "Tableau du planning prévisionnel")
+
+*Figure 2. Tableau du planning prévisionnel*
 
 
 
