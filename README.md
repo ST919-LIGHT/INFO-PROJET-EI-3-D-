@@ -1,5 +1,5 @@
 ---
-title: Analyse fonctionnelle d'un projet
+title: Analyse fonctionnelle de notre projet
 date: 2026-10-31
 subtitle: UL1IN021
 author: Clautina Kieki-Mafuta, Nayirah Abdool, Myra Souici Amar, Lina El Fatmi
